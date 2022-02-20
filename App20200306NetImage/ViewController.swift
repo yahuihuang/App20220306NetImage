@@ -13,8 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let imgPath = "https://warrant.tssco.com.tw/warrantweb/assets/img/mainPageNew/pick-warrants-h-img.png"
+        let imgPath = "https://warrant.tssco.com.tw/warrantweb/assets/img/mainPageNew/blog-h-img.png"
 
+        myImage.layer.borderColor = UIColor.red.cgColor
+        myImage.layer.borderWidth = 2
+        myImage.layer.cornerRadius = myImage.bounds.width / 2
+        myImage.clipsToBounds = true
+        
+        // load image
         let url = URL(string: imgPath)!
         print("start \(Date().timeIntervalSince1970)")
         

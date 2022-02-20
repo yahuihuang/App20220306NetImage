@@ -16,17 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bdu-xp-bd8">
-                                <rect key="frame" x="10" y="144" width="394" height="618"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bdu-xp-bd8">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <color key="backgroundColor" red="1" green="0.91940291090000004" blue="0.1069808545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="UWu-gj-rBH"/>
+                                    <constraint firstAttribute="width" constant="240" id="Y05-6N-va6"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bdu-xp-bd8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="72q-G5-DtA"/>
-                            <constraint firstItem="Bdu-xp-bd8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="HMX-gW-Xfp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bdu-xp-bd8" secondAttribute="bottom" constant="100" id="kS8-pW-bOk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bdu-xp-bd8" secondAttribute="trailing" constant="10" id="yfS-fv-oUK"/>
+                            <constraint firstItem="Bdu-xp-bd8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eqg-az-U13"/>
+                            <constraint firstItem="Bdu-xp-bd8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d1E-36-7n7"/>
                         </constraints>
                     </view>
                     <connections>
