@@ -20,7 +20,7 @@
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bdu-xp-bd8">
-                                        <rect key="frame" x="0.0" y="10" width="230" height="220"/>
+                                        <rect key="frame" x="10" y="10" width="220" height="220"/>
                                         <color key="backgroundColor" red="1" green="0.91940291090000004" blue="0.1069808545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                 </subviews>
@@ -29,11 +29,8 @@
                                     <constraint firstAttribute="width" constant="240" id="BkB-nl-RpT"/>
                                     <constraint firstItem="Bdu-xp-bd8" firstAttribute="top" secondItem="2yJ-KD-jSW" secondAttribute="top" constant="10" id="DsW-eV-7Ne"/>
                                     <constraint firstItem="Bdu-xp-bd8" firstAttribute="centerY" secondItem="2yJ-KD-jSW" secondAttribute="centerY" id="Q2x-eN-JIc"/>
-                                    <constraint firstItem="Bdu-xp-bd8" firstAttribute="top" secondItem="2yJ-KD-jSW" secondAttribute="bottom" constant="-212" id="Vzu-fr-WEc"/>
                                     <constraint firstAttribute="height" constant="240" id="dca-xG-IEf"/>
                                     <constraint firstItem="Bdu-xp-bd8" firstAttribute="leading" secondItem="2yJ-KD-jSW" secondAttribute="leading" constant="10" id="lRN-fD-wT0"/>
-                                    <constraint firstAttribute="trailing" secondItem="Bdu-xp-bd8" secondAttribute="trailing" id="qFa-0G-fZT"/>
-                                    <constraint firstAttribute="leading" secondItem="Bdu-xp-bd8" secondAttribute="leading" id="vUs-AE-Kle"/>
                                     <constraint firstAttribute="trailing" secondItem="Bdu-xp-bd8" secondAttribute="trailing" constant="10" id="zOs-c9-Y4k"/>
                                 </constraints>
                             </view>
