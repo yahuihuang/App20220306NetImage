@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         content.clipsToBounds = false
         content.layer.shadowRadius = 20 //陰影
         content.layer.shadowOpacity = 0.6;
-        content.layer.shadowColor = UIColor.gray.cgColor
+        content.layer.shadowColor = UIColor.yellow.cgColor
         content.layer.shadowOffset = CGSize(width: 10, height: 10)
         
         // load image
