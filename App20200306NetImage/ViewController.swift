@@ -9,16 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var content: UIView!
     @IBOutlet weak var myImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let imgPath = "https://warrant.tssco.com.tw/warrantweb/assets/img/mainPageNew/blog-h-img.png"
 
+        //cornerRadius
         myImage.layer.borderColor = UIColor.red.cgColor
         myImage.layer.borderWidth = 2
         myImage.layer.cornerRadius = myImage.bounds.width / 2
         myImage.clipsToBounds = true
+        
+        //shadow
+        content.clipsToBounds = false
+        content.layer.shadowRadius = 20 //陰影
+        content.layer.shadowOpacity = 0.6;
+        content.layer.shadowColor = UIColor.gray.cgColor
+        content.layer.shadowOffset = CGSize(width: 10, height: 10)
         
         // load image
         let url = URL(string: imgPath)!
