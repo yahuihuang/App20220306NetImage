@@ -52,7 +52,7 @@ class ViewController: UIViewController {
 //            }
 //        }
 //
-//        print("end \(Date().timeIntervalSince1970)")
+        print("end \(Date().timeIntervalSince1970)")
     }
 
 
