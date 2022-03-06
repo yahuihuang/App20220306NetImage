@@ -16,7 +16,7 @@ class APIModel {
         
     }
     
-    func queryRandomUserAlamofire(completion: @escaping(_ Data: Any?, _ respError: Error?)->())-> () {
+    func queryRandomUserAlamofire(completion: @escaping(_ data: Any?, _ respError: Error?)->())-> () {
         let url = apiURL
         DispatchQueue.global().async {
             AF.request(url,

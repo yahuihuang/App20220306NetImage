@@ -8,6 +8,7 @@
 import UIKit
 //import Kingfisher
 import SDWebImage
+import SwiftyJSON
 
 
 class ViewController: UIViewController {
@@ -39,12 +40,30 @@ class ViewController: UIViewController {
         let apiModel = APIModel.share
         apiModel.queryRandomUserAlamofire { data, respError in
             if respError != nil {
-                
                 print(respError?.localizedDescription ?? "")
-            } else {
-                let respData = data as! Data
-                let dataString = String(decoding: respData, as: UTF8.self)
-                print(dataString)
+                return
+            }
+            
+            let respData = data as! Data
+            let dataString = String(decoding: respData, as: UTF8.self)
+            print(dataString)
+            
+            do {
+                let theResult = try JSON(data: respData)
+                
+                let resultCount = theResult["results"].count
+                if (resultCount >= 1) {
+                    print(theResult["results"][resultCount-1]["login"]["username"].stringValue)
+                    
+                    let imageUrl = theResult["results"][resultCount-1]["picture"]["large"].stringValue
+                    print("imageUrl: \(imageUrl)")
+                    
+                    self.myImage.sd_setImage(with: URL(string: imageUrl), completed: { image, error, imageCacheType, url in
+                        print("end:\(Date().timeIntervalSince1970)")
+                    })
+                }
+            } catch {
+                print("API Error")
             }
         }
         
@@ -53,9 +72,10 @@ class ViewController: UIViewController {
 //        }
         
 //        self.myImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
-        self.myImage.sd_setImage(with: url, completed: { image, error, imageCacheType, url in
-            print("end:\(Date().timeIntervalSince1970)")
-        })
+        
+//        self.myImage.sd_setImage(with: url, completed: { image, error, imageCacheType, url in
+//            print("end:\(Date().timeIntervalSince1970)")
+//        })
 
 //        DispatchQueue.global().async {
 //            do {
