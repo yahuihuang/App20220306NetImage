@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
+import SDWebImage
 
 class ViewController: UIViewController {
 
@@ -35,9 +36,14 @@ class ViewController: UIViewController {
         print("start \(Date().timeIntervalSince1970)")
         
         
-        self.myImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { result in
+//        self.myImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { result in
+//            print("end:\(Date().timeIntervalSince1970)")
+//        }
+        
+//        self.myImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
+        self.myImage.sd_setImage(with: url, completed: { image, error, imageCacheType, url in
             print("end:\(Date().timeIntervalSince1970)")
-        }
+        })
 
 //        DispatchQueue.global().async {
 //            do {

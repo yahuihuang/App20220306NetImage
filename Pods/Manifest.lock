@@ -2,21 +2,27 @@ PODS:
   - Kingfisher (5.11.0):
     - Kingfisher/Core (= 5.11.0)
   - Kingfisher/Core (5.11.0)
+  - SDWebImage (5.12.3):
+    - SDWebImage/Core (= 5.12.3)
+  - SDWebImage/Core (5.12.3)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Kingfisher
+  - SDWebImage
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - SDWebImage
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Kingfisher: 4569606189149e19c7d9439f47e885d0679b7a90
+  SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 382db28a76cedc95e88cda3a3f62e484cc4d7c3e
+PODFILE CHECKSUM: 04b1ec75823b8fef6b5637d9d16f93d62b66b0ed
 
 COCOAPODS: 1.11.2

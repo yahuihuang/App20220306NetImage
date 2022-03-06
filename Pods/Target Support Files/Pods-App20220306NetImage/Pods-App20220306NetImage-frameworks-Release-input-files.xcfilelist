@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-App20220306NetImage/Pods-App20220306NetImage-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
