@@ -9,5 +9,6 @@ target 'App20220306NetImage' do
   pod 'SwiftyJSON'
   pod 'Kingfisher'
   pod 'SDWebImage'
+  pod 'Alamofire'
 
 end
