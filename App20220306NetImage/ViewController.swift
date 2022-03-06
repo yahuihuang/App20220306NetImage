@@ -15,6 +15,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var content: UIView!
     @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,9 +85,14 @@ class ViewController: UIViewController {
                 
                 let resultCount = theResult["results"].count
                 if (resultCount >= 1) {
-                    print(theResult["results"][resultCount-1]["login"]["username"].stringValue)
+                    let resultIdx = resultCount-1
+                    let userName = theResult["results"][resultIdx]["login"]["username"].stringValue
+                    self.lblName.text = userName
                     
-                    let imageUrl = theResult["results"][resultCount-1]["picture"]["large"].stringValue
+                    let email = theResult["results"][resultIdx]["email"].stringValue
+                    self.lblEmail.text = email
+                    
+                    let imageUrl = theResult["results"][resultIdx]["picture"]["large"].stringValue
                     print("imageUrl: \(imageUrl)")
                     
                     self.myImage.sd_setImage(with: URL(string: imageUrl), completed: { image, error, imageCacheType, url in
