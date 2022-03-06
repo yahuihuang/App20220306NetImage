@@ -34,7 +34,37 @@ class ViewController: UIViewController {
         content.layer.shadowOffset = CGSize(width: 10, height: 10)
         
         // load image
-        let url = URL(string: imgPath)!
+//        let url = URL(string: imgPath)!
+        updateUser()
+        
+//        self.myImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { result in
+//            print("end:\(Date().timeIntervalSince1970)")
+//        }
+        
+//        self.myImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
+        
+//        self.myImage.sd_setImage(with: url, completed: { image, error, imageCacheType, url in
+//            print("end:\(Date().timeIntervalSince1970)")
+//        })
+
+//        DispatchQueue.global().async {
+//            do {
+//                let imageData = try Data(contentsOf: url)
+//                DispatchQueue.main.async {
+//                    self.myImage.image = UIImage(data: imageData)
+//                    print("show myImage \(Date().timeIntervalSince1970)")
+//                }
+//
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
+
+        print("end \(Date().timeIntervalSince1970)")
+    }
+    
+    
+    func updateUser() {
         print("start \(Date().timeIntervalSince1970)")
         
         let apiModel = APIModel.share
@@ -66,31 +96,6 @@ class ViewController: UIViewController {
                 print("API Error")
             }
         }
-        
-//        self.myImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { result in
-//            print("end:\(Date().timeIntervalSince1970)")
-//        }
-        
-//        self.myImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
-        
-//        self.myImage.sd_setImage(with: url, completed: { image, error, imageCacheType, url in
-//            print("end:\(Date().timeIntervalSince1970)")
-//        })
-
-//        DispatchQueue.global().async {
-//            do {
-//                let imageData = try Data(contentsOf: url)
-//                DispatchQueue.main.async {
-//                    self.myImage.image = UIImage(data: imageData)
-//                    print("show myImage \(Date().timeIntervalSince1970)")
-//                }
-//
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }
-
-        print("end \(Date().timeIntervalSince1970)")
     }
 
 
