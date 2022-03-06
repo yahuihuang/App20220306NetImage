@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
@@ -33,20 +34,25 @@ class ViewController: UIViewController {
         let url = URL(string: imgPath)!
         print("start \(Date().timeIntervalSince1970)")
         
-        DispatchQueue.global().async {
-            do {
-                let imageData = try Data(contentsOf: url)
-                DispatchQueue.main.async {
-                    self.myImage.image = UIImage(data: imageData)
-                    print("show myImage \(Date().timeIntervalSince1970)")
-                }
-                
-            } catch {
-                print(error.localizedDescription)
-            }
+        
+        self.myImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { result in
+            print("end:\(Date().timeIntervalSince1970)")
         }
 
-        print("end \(Date().timeIntervalSince1970)")
+//        DispatchQueue.global().async {
+//            do {
+//                let imageData = try Data(contentsOf: url)
+//                DispatchQueue.main.async {
+//                    self.myImage.image = UIImage(data: imageData)
+//                    print("show myImage \(Date().timeIntervalSince1970)")
+//                }
+//
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
+//
+//        print("end \(Date().timeIntervalSince1970)")
     }
 
 
