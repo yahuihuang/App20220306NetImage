@@ -36,6 +36,17 @@ class ViewController: UIViewController {
         let url = URL(string: imgPath)!
         print("start \(Date().timeIntervalSince1970)")
         
+        let apiModel = APIModel.share
+        apiModel.queryRandomUserAlamofire { data, respError in
+            if respError != nil {
+                
+                print(respError?.localizedDescription ?? "")
+            } else {
+                let respData = data as! Data
+                let dataString = String(decoding: respData, as: UTF8.self)
+                print(dataString)
+            }
+        }
         
 //        self.myImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { result in
 //            print("end:\(Date().timeIntervalSince1970)")
